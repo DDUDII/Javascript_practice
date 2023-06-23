@@ -1,2 +1,2 @@
 # js_test
- js 연습
+ javascript 연습
