@@ -4,24 +4,33 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5%;
+.login {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.login__wrapper {
+  width: 400px;
+  height: 350px;
+  padding: 40px;
   box-sizing: border-box;
 }
 
-.login {
-  display: flex;
+.login__wrapper > h2 {
+  font-family: inherit;
+  font-size: 24px;
 }
 
 .login__input {
   border: none;
-  padding: 0.5rem 2rem;
-  font-size: 1.6rem;
+  padding: 10px 20px;
+  font-size: 16px;
   font-family: inherit;
   text-align: center;
-  width: 12rem;
+  width: 100%;
   border-radius: 10rem;
-  margin-right: 2rem;
+  margin-right: 20px;
+  margin-top: 20px;
   color: inherit;
   border: 1px solid #fff;
   transition: all 0.3s;
@@ -40,13 +49,20 @@ html {
 .login__btn {
   border: none;
   background: none;
-  font-size: 2.2rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 70px;
+  border-radius: 10rem;
+  border: 1px solid #fff;
   color: inherit;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.login__btn:hover,
+.login__btn:hover {
+  background-color: #fff;
+}
 .login__btn:focus,
 .btn--sort:hover,
 .btn--sort:focus {
@@ -54,10 +70,16 @@ html {
   color: #777;
 }
 
+.login > label {
+  font-family: inherit;
+  margin: 0px;
+  padding: 10px;
+  display: inline-block;
+  accent-color: #444;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #444;
   background-color: #f3f3f3;
-  height: 100vh;
-  padding: 2rem;
 }

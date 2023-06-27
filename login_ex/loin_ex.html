@@ -15,20 +15,28 @@
   </head>
 
   <body>
-    <form class="login">
-      <input
-        type="text"
-        placeholder="user"
-        class="login__input login__input--user"
-      />
-      <!-- In practice, use type="password" -->
-      <input
-        type="text"
-        placeholder="PIN"
-        maxlength="4"
-        class="login__input login__input--pin"
-      />
-      <button class="login__btn">&rarr;</button>
-    </form>
+    <div class="login__wrapper">
+      <h2>Login</h2>
+      <form class="login">
+        <input
+          type="text"
+          placeholder="user"
+          class="login__input login__input--user"
+        />
+        <!-- In practice, use type="password" -->
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login__input login__input--pin"
+        />
+
+        <!-- input 태그와 id 태그를 똑같게 하면 아무대나 눌러도 체크됨 -->
+        <label for="remember__check">
+          <input type="checkbox" id="remember__check" /> 아이디 저장하기
+        </label>
+        <button class="login__btn">로그인</button>
+      </form>
+    </div>
   </body>
 </html>
