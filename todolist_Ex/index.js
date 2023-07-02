@@ -5,19 +5,22 @@ const input = document.querySelector(".inputTodo");
 const button = document.querySelector(".todoBtn");
 const ul = document.querySelector(".ulTodo");
 const deleteAllBtn = document.querySelector(".deleteAllBtn");
+//const textArea = document.querySelector(".textTodo");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault(); //제출 버튼 누를시
 
   if (input.value !== "") {
     const list = document.createElement("li"); //내용입력시 li태그로 만들어짐
+    //const title = document.createElement("h3");
     const checkList = document.createElement("input");
     checkList.type = "checkbox";
-
+    //const content = document.createElement("textarea");
+    //content.type = "textarea";
     const span = document.createElement("span"); //li태그안에 값을 span태그로 묶기
     span.innerText = input.value;
     list.appendChild(span);
-
+    //list.appendChild(content);
     list.prepend(checkList); //li 안에 checkbox 넣기
 
     const reBtn = document.createElement("button"); //수정버튼 만들기
@@ -27,6 +30,7 @@ form.addEventListener("submit", (event) => {
 
     list.appendChild(reBtn); //li안에 수정 버튼 넣기
     list.appendChild(deleteBtn); //li안에 삭제 버튼 넣기
+    //list.appendChild(textArea);
     ul.appendChild(list); //ul안에 li 넣기
 
     reBtn.addEventListener("click", () => {

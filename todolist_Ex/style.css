@@ -1,3 +1,104 @@
 li {
   list-style-type: none;
 }
+
+body {
+  background-color: #f5f8fa;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+.formTodo {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.inputTodo {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.todoBtn {
+  background-color: #1da1f2;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ulTodo {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ulTodo li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.ulTodo li span {
+  margin-right: 10px;
+}
+
+.ulTodo li button {
+  background-color: transparent;
+  border: none;
+  color: #1da1f2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteAllBtn {
+  background-color: #949090;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.deleteCheckedBtn {
+  background-color: #949090;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.ulTodo li input[type="checkbox"] {
+  transform: scale(1.5);
+}
