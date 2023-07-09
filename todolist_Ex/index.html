@@ -10,16 +10,27 @@
     <h1>오늘의 할일</h1>
     <div class="container">
       <form class="formTodo">
-        <input class="inputTodo" type="text" placeholder="오늘의 할일" />
+        <input
+          class="inputTodo"
+          type="text"
+          placeholder="제목을 입력해 주세요"
+          maxlength="50"
+        />
+        <textarea
+          class="textTodo"
+          placeholder="내용을 입력해 주세요"
+          maxlength="500"
+        ></textarea>
         <button class="todoBtn">추가</button>
       </form>
       <ul class="ulTodo"></ul>
+
       <button class="deleteCheckedBtn">체크된 항목 삭제</button>
       <button class="deleteAllBtn">전체 삭제</button>
-
       <div></div>
     </div>
 
     <script src="index.js"></script>
   </body>
 </html>
+-
