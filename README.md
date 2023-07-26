@@ -1,2 +1,2 @@
 # js_test
- javascript 연습
+📍 javascript 를 배우며 연습하는 공간 
