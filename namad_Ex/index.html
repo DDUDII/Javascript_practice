@@ -7,7 +7,6 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 id="greeting"></h1>
     <!-- form에서는 엔터치면 바로 submit 됨 페이지 새로고침 -->
     <form id="login-form" class="hidden">
       <input
@@ -19,6 +18,25 @@
       <button>log in</button>
     </form>
 
-    <script src="index.js"></script>
+    <form id="todo-form">
+      <input required type="text" placeholder="할일을 입력해 주세요" />
+      <button>추가</button>
+    </form>
+    <ul id="todo-list"></ul>
+
+    <h1 id="greeting"></h1>
+
+    <h1 id="clock">00:00:00</h1>
+
+    <div id="quote">
+      <span></span><br />
+      <span></span>
+    </div>
+    <!-- <img src="images/석양.jpg" /> -->
+    <script src="greeing.js"></script>
+    <script src="clock.js"></script>
+    <script src="quotes.js"></script>
+    <script src="background.js"></script>
+    <script src="todo.js"></script>
   </body>
 </html>
