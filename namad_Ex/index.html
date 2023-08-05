@@ -3,46 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Gloria+Hallelujah&family=Nanum+Pen+Script&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <!-- form에서는 엔터치면 바로 submit 됨 페이지 새로고침 -->
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="10"
-        type="text"
-        placeholder="이름을 입력해 주세요"
-      />
-      <button>log in</button>
-    </form>
+    <div id="content">
+      <!-- 로그인 부분 -->
+      <!-- form에서는 엔터치면 바로 submit 됨 페이지 새로고침 -->
+      <form id="login-form" class="hidden">
+        <input required maxlength="10" type="text" placeholder="NAME" />
+        <button class="login-btn">log in</button>
+      </form>
+      <h1 id="greeting"></h1>
 
-    <form id="todo-form">
-      <input required type="text" placeholder="할일을 입력해 주세요" />
-      <button>추가</button>
-    </form>
-    <ul id="todo-list"></ul>
+      <!-- 시계 부분 -->
+      <h1 id="clock">00:00:00</h1>
 
-    <h1 id="greeting"></h1>
-
-    <h1 id="clock">00:00:00</h1>
-
+      <!-- 투두리스트 부분 -->
+      <form id="todo-form">
+        <input required type="text" placeholder="TODO" />
+        <button>추가</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+    <!-- 인용구 부분 -->
     <div id="quote">
       <span></span><br />
       <span></span>
     </div>
+
+    <!-- 날씨부분 -->
     <div id="weather">
       <span></span>
       <span></span>
     </div>
-    <!-- <img src="images/석양.jpg" /> -->
+
+    <!-- <img src="images/바다.jpg" id="bgImg" /> -->
+
     <script src="greeing.js"></script>
     <script src="clock.js"></script>
     <script src="quotes.js"></script>
-    <script src="background.js"></script>
+    <!-- <script src="background.js"></script> -->
     <script src="todo.js"></script>
-    <script src="weather.js"></script>
+    <!-- <script src="weather.js"></script> -->
     <script src="apikey.js"></script>
   </body>
 </html>

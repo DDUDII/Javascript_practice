@@ -5,13 +5,13 @@ const TODOS_KEY = "todos";
 
 let todos = [];
 
-//@@@@ todo 입력값을 저장해주는 함수 @@@@
+//-------- todo 입력값을 저장해주는 함수 --------
 function saveTodo() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
   //JSON.stringify --> 객체나 배열을 무조건 string으로 바꿔줌, 로컬스토리지에는 배열이 저장 안되기때문
 }
 
-//@@@@ 삭제 버튼 누를시에 대한 함수 @@@@
+//-------- 삭제 버튼 누를시에 대한 함수 --------
 function delBtnClick(event) {
   const li = event.target.parentElement; //del버튼의 부모 노드 불러옴
   todos = todos.filter((item) => item.id !== parseInt(li.id)); //li.id는 문자형이어서 넘버로 바꿔주기
@@ -20,7 +20,7 @@ function delBtnClick(event) {
   saveTodo(); //변경된 배열을 다시 저장하기 위해 호출해줌?!
 }
 
-// @@@@ 보여질 화면에 대한 함수 @@@@
+// -------- 보여질 화면에 대한 함수 --------
 function paintTodo(newTodo) {
   const li = document.createElement("li"); //js에서 li 태그 생성
   li.id = newTodo.id; //input값을 li로 보여지게
@@ -36,13 +36,13 @@ function paintTodo(newTodo) {
   todoList.appendChild(li);
 }
 
-//@@@@ 클릭시 발생하는 이벤트 함수 @@@@@
+//-------- 클릭시 발생하는 이벤트 함수 --------
 function todoBtnClick(event) {
   event.preventDefault(); //form에서 클릭(submit)시 자동으로 새로고침 방지
   const newTodo = todoInput.value; //todo input 값을 변수에 복사해주기
   todoInput.value = ""; //input 값 제출 후 공백으로 만들어주기
 
-  //---- 입력되는 input값을 객체롤 만들어서 id 주기 ----
+  //-------- 입력되는 input값을 객체롤 만들어서 id 주기 --------
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
